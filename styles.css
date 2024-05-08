@@ -340,3 +340,9 @@
   #contact-form button:hover {
    background-color: #e65c4f;
   }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+   }
