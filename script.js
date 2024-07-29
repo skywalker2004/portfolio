@@ -1,41 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Typed.js initialization
-    var typed = new Typed('.typed-text', {
-        strings: ["Software Developer", "Web Designer", "Tech Enthusiast"],
-        typeSpeed: 50,
-        backSpeed: 25,
-        backDelay: 2000,
-        loop: true
-    });
-
-    // Navigation toggle for mobile view
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile navigation toggle
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
+  
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('nav-menu_visible');
     });
-
-    // Update the year in the footer
+  
+    // Update year dynamically in footer
     const yearSpan = document.getElementById('year');
     yearSpan.textContent = new Date().getFullYear();
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+  
+    // Initialize typed.js for the hero section
+    const typed = new Typed('.typed-text', {
+      strings: ['Software Developer', 'Web Designer', 'Tech Enthusiast'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
     });
-});
-
-// Contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Placeholder for form submission logic, e.g., AJAX request
-    alert('Thank you for your message. We will get back to you soon!');
-});
+  
+    // Handle form submission
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Here you can handle the form submission, like sending data to a server
+      alert('Message sent!');
+    });
+  
+    // Modal functionality
+    const modalLinks = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close');
+  
+    modalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = link.getAttribute('href');
+        document.querySelector(modalId).style.display = 'block';
+      });
+    });
+  
+    closeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        modals.forEach(modal => {
+          modal.style.display = 'none';
+        });
+      });
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+      }
+    });
+  });
+  
