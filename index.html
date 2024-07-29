@@ -46,7 +46,7 @@
                 <a href="#" class="btn">Download Resume</a>
               </div>
               <div class="about-image">
-                <img src="profile.jpg" alt="Profile Picture">
+                <img src="profile.jpeg" alt="Profile Picture">
               </div>
             </div>
           </section>
@@ -80,7 +80,7 @@
                 <div class="project-overlay">
                   <h3>Project 1</h3>
                   <p>Brief description of Project 1.</p>
-                  <a href="#" class="btn">View Project</a>
+                  <a href="#project1Modal" class="btn" data-modal>View Project</a>
                 </div>
               </div>
               <div class="project">
@@ -88,11 +88,29 @@
                 <div class="project-overlay">
                   <h3>Project 2</h3>
                   <p>Brief description of Project 2.</p>
-                  <a href="#" class="btn">View Project</a>
+                  <a href="#project2Modal" class="btn" data-modal>View Project</a>
                 </div>
               </div>
             </div>
           </section>
+
+          <!-- Project 1 Modal -->
+          <div id="project1Modal" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal>&times;</span>
+              <h2>Project 1</h2>
+              <p>Details about Project 1...</p>
+            </div>
+          </div>
+
+          <!-- Project 2 Modal -->
+          <div id="project2Modal" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal>&times;</span>
+              <h2>Project 2</h2>
+              <p>Details about Project 2...</p>
+            </div>
+          </div>
 
         <section id="contact">
      <h2>Get in Touch</h2>
