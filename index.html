@@ -1,147 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-          <div class="logo">
-            <a href="#"><span>My</span>Portfolio</a>
-          </div>
-          <div class="nav-toggle" id="nav-toggle">
-            <i class="fas fa-bars"></i>
-          </div>
-          <ul class="nav-menu">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span>My</span>Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
-        </nav>
-      </header>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-      <main>
-        <section id="hero">
-          <div class="hero-content">
-            <h1>Hello, I'm <span>Kelvin Kiprono</span></h1>
-            <p>I'm a <span class="typed-text">Software developer</span></p>
-            <a href="#portfolio" class="btn">View Portfolio</a>
+  <main>
+    <section id="hero" class="text-center">
+      <div class="hero-content container">
+        <h1>Hello, I'm <span>Kelvin Kiprono</span></h1>
+        <p>I'm a <span class="typed-text">Software developer</span></p>
+        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+      </div>
+    </section>
+
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="text-center">About Me</h2>
+        <div class="about-content row align-items-center">
+          <div class="about-text col-md-6">
+            <p>I am pursuing my passion for technology at the Institute of Software Technologies located in Westlands, Nairobi. My journey here has been filled with exploration, learning, and growth as I delve deeper into the world of software development and technology. 
+              With each passing day, I am driven by a relentless ambition to make a positive impact in the tech industry and beyond.
+            </p>
+            <a href="#" class="btn btn-secondary">Download Resume</a>
           </div>
-        </section>
+          <div class="about-image col-md-6 text-center">
+            <img src="profile.jpeg" alt="Profile Picture" class="img-fluid rounded-circle">
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-              <div class="about-text">
-                <p>I am pursuing my passion for technology at the Institute of Software Technologies located in Westlands, Nairobi. My journey here has been filled with exploration, learning, and growth as I delve deeper into the world of software development and technology. 
-                    With each passing day, I am driven by a relentless ambition to make a positive impact in the tech industry and beyond.
+    <section id="skills" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center">My Skills</h2>
+        <div class="skills-container row">
+          <div class="skill col-md-4 text-center">
+            <i class="fab fa-html5 fa-3x"></i>
+            <h3>HTML</h3>
+            <p>Done with HTML5 and creating semantic markup.</p>
+          </div>
+          <div class="skill col-md-4 text-center">
+            <i class="fab fa-css3-alt fa-3x"></i>
+            <h3>CSS</h3>
+            <p>Worked on CSS3, including animations and responsive design.</p>
+          </div>
+          <div class="skill col-md-4 text-center">
+            <i class="fab fa-js fa-3x"></i>
+            <h3>JavaScript</h3>
+            <p>Learned JavaScript, including frameworks and libraries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                </p>
-                <a href="#" class="btn">Download Resume</a>
-              </div>
-              <div class="about-image">
-                <img src="profile.jpeg" alt="Profile Picture">
-              </div>
+    <section id="portfolio" class="py-5">
+      <div class="container">
+        <h2 class="text-center">My Portfolio</h2>
+        <div class="portfolio-container row">
+          <div class="project col-md-6">
+            <img src="project 1.jpeg" alt="Project 1" class="img-fluid">
+            <div class="project-overlay">
+              <h3>Project 1</h3>
+              <p>Brief description of Project 1.</p>
+              <a href="#project1Modal" class="btn btn-primary" data-toggle="modal">View Project</a>
             </div>
-          </section>
-
-          <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-              <div class="skill">
-                <i class="fab fa-html5"></i>
-                <h3>HTML</h3>
-                <p>Done with HTML5 and creating semantic markup.</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS</h3>
-                <p>Worked on CSS3, including animations and responsive design.</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
-                <p>Learned JavaScript, including frameworks and libraries.</p>
-              </div>
+          </div>
+          <div class="project col-md-6">
+            <img src="pic 2.png" alt="Project 2" class="img-fluid">
+            <div class="project-overlay">
+              <h3>Project 2</h3>
+              <p>Brief description of Project 2.</p>
+              <a href="#project2Modal" class="btn btn-primary" data-toggle="modal">View Project</a>
             </div>
-          </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <section id="portfolio">
-            <h2>My Portfolio</h2>
-            <div class="portfolio-container">
-              <div class="project">
-                <img src="pic 1.jpeg" alt="Project 1">
-                <div class="project-overlay">
-                  <h3>Project 1</h3>
-                  <p>Brief description of Project 1.</p>
-                  <a href="#project1Modal" class="btn" data-modal>View Project</a>
-                </div>
-              </div>
-              <div class="project">
-                <img src="pic 2.png" alt="Project 2">
-                <div class="project-overlay">
-                  <h3>Project 2</h3>
-                  <p>Brief description of Project 2.</p>
-                  <a href="#project2Modal" class="btn" data-modal>View Project</a>
-                </div>
-              </div>
+    <!-- Project 1 Modal -->
+    <div id="project1Modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Project 1: Music Studio Website</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>This project involves creating a dynamic and user-friendly website for a music studio. The site features an intuitive interface where users can explore different services offered by the studio, including recording sessions, music production, and instrument lessons. Visitors can book sessions online, view a gallery of past projects, and read testimonials from satisfied clients. The website also includes a blog section with articles on music tips and industry news, and a contact page with a form for inquiries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div id="project2Modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Project 2: Real Estate Website</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>This project focuses on developing a comprehensive real estate website. The site allows users to search for properties based on various criteria such as location, price range, and property type. Each property listing includes detailed descriptions, high-quality images, virtual tours, and maps. The website also features a mortgage calculator, client testimonials, and a blog with tips for buyers and sellers. Users can create accounts to save their favorite properties and receive notifications on new listings. A contact form and agent directory are included for easy communication with real estate professionals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center">Get in Touch</h2>
+        <div class="contact-container row">
+          <div class="contact-info col-md-6">
+            <h3>Contact Information</h3>
+            <p><i class="fas fa-envelope"></i> Email: kelvinkiprono@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: +254 723-456-890</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
             </div>
-          </section>
+          </div>
+          <form id="contact-form" class="col-md-6">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-         <!-- Project 1 Modal -->
-<div id="project1Modal" class="modal">
-  <div class="modal-content">
-    <span class="close" data-modal>&times;</span>
-    <h2>Project 1: Music Studio Website</h2>
-    <p>This project involves creating a dynamic and user-friendly website for a music studio. The site features an intuitive interface where users can explore different services offered by the studio, including recording sessions, music production, and instrument lessons. Visitors can book sessions online, view a gallery of past projects, and read testimonials from satisfied clients. The website also includes a blog section with articles on music tips and industry news, and a contact page with a form for inquiries.</p>
-  </div>
-</div>
-
-<!-- Project 2 Modal -->
-<div id="project2Modal" class="modal">
-  <div class="modal-content">
-    <span class="close" data-modal>&times;</span>
-    <h2>Project 2: Real Estate Website</h2>
-    <p>This project focuses on developing a comprehensive real estate website. The site allows users to search for properties based on various criteria such as location, price range, and property type. Each property listing includes detailed descriptions, high-quality images, virtual tours, and maps. The website also features a mortgage calculator, client testimonials, and a blog with tips for buyers and sellers. Users can create accounts to save their favorite properties and receive notifications on new listings. A contact form and agent directory are included for easy communication with real estate professionals.</p>
-  </div>
-</div>
-
-        <section id="contact">
-     <h2>Get in Touch</h2>
-     <div class="contact-container">
-       <div class="contact-info">
-         <h3>Contact Information</h3>
-         <p><i class="fas fa-envelope"></i> Email: kelvinkiprono@gmail.com</p>
-         <p><i class="fas fa-phone"></i> Phone: +254 723-456-890</p>
-         <div class="social-links">
-           <a href="#"><i class="fab fa-facebook"></i></a>
-           <a href="#"><i class="fab fa-twitter"></i></a>
-           <a href="#"><i class="fab fa-linkedin"></i></a>
-           <a href="#"><i class="fab fa-github"></i></a>
-         </div>
-       </div>
-       <form id="contact-form">
-         <input type="text" placeholder="Name" required>
-         <input type="email" placeholder="Email" required>
-         <textarea placeholder="Message" required></textarea>
-         <button type="submit">Send Message</button>
-       </form>
-     </div>
-   </section>
-   </main>
-
-   <footer>
+  <footer class="py-4 bg-dark text-white text-center">
     <p>&copy; <span id="year"></span> BONKE G. All rights reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
- <script src="script.js"></script>
-
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
